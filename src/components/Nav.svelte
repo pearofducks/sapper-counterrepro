@@ -1,5 +1,6 @@
 <script>
 	export let segment;
+  import { media } from 'svelte-match-media'
 </script>
 
 <style>
@@ -47,6 +48,10 @@
 		display: block;
 	}
 </style>
+
+{#if $media && $media.desktop}
+  <h1>I am in a component</h1>
+{/if}
 
 <nav>
 	<ul>
